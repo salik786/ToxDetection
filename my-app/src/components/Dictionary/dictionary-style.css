@@ -1,0 +1,75 @@
+.row-dict {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  direction: row;
+  background-color: rgb(233, 233, 233);
+}
+.col-left {
+  width: 45%;
+  margin: 2%;
+  padding: 2%;
+  border-radius: 20px;
+  height: 90vh;
+
+  color: black;
+  background-color: white;
+}
+.col-right {
+  width: 45%;
+  border-radius: 20px;
+  height: 90vh;
+  margin: 2%;
+  padding: 2%;
+  background-color: white;
+}
+.col-right > h3 {
+  background-color: #e86138;
+  color: white;
+  padding: 1%;
+  width: 90%;
+}
+.col-left > h3 {
+  background-color: #2fc164;
+  color: white;
+  padding: 1%;
+  width: 90%;
+}
+
+.add-word {
+  padding: 10px;
+  background-color: #1c3f82;
+  border: 2px solid #1c3f82;
+  color: white;
+}
+.inp-word {
+  border: 1px solid #1c3f82;
+}
+.ul-dict {
+  height: 70vh;
+  width: 90%;
+  color: black;
+  overflow-y: scroll;
+}
+.li-dict {
+  height: auto;
+  padding: 10px;
+  width: 100%;
+  border-bottom: 1px solid #2fc164;
+  color: black;
+}
+/* scrollbar styling */
+.ul-dict::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+/* ::-webkit-scrollbar-track {
+  background: #072c72; /* color of the tracking area 
+} */
+.ul-dict::-webkit-scrollbar-thumb {
+  background-color: rgb(10, 191, 107); /* color of the scroll thumb */
+  height: 60px;
+
+  /* border-: 20px; roundness of the scroll thumb */
+  border: 3px solid rgb(14, 199, 98); /* creates padding around scroll thumb */
+}

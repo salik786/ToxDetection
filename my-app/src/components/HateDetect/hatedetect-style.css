@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100&display=swap");
+.outer-hate {
+  width: 100%;
+}
+.hatecheck {
+  background-color: #1c3f82;
+  text-align: center;
+}
+.hate-words {
+  color: red;
+}
+
+.instruct {
+  color: rgba(105, 106, 106, 0.823);
+  width: 80%;
+  font-size: 12px;
+  text-align: center;
+}
+.instruct > button {
+  padding: 10px;
+  background-color: #1c3f82;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 1px solid #1c3f82;
+}
+.hate-search-inp {
+  border: 1px solid #2a4f92;
+}
+.hate-stat {
+  color: black;
+  height: 70vh;
+  font-family: "Be Vietnam", sans-serif;
+}
+.hate-li {
+  padding: 20px;
+}

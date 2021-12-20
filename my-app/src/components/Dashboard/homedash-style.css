@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@500&display=swap");
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: "Be Vietnam", sans-serif;
+}
+.row {
+  height: 100vh;
+  background-color: #ecf5f7;
+  font-family: "Be Vietnam", sans-serif;
+  display: flex;
+  flex-direction: row;
+}
+
+.col1-trendtweet {
+  width: 35%;
+  height: 95vh;
+  margin-top: 1%;
+}
+
+/* trend tweets component styling */
+.trend-heading {
+  text-align: center;
+  font-weight: bolder;
+
+  color: white;
+  padding: 10px;
+
+  font-size: 20px;
+}
+.trend-tweets {
+  height: 100%;
+  border-radius: 10px;
+  background-color: #1c3f82;
+  box-shadow: 0 1px 8px 0 #0e2468, 0 5px 5px 0 #182c52;
+}
+.search-bar {
+  border: 1px solid #c1cde2;
+  width: 70%;
+  margin: 5px;
+}
+
+.search-btn {
+  padding: 8px;
+  font-family: "Be Vietnam", sans-serif;
+  color: WHITE;
+
+  background-color: #03173d;
+  border: 1px solid #03173d;
+}
+.heading-ana {
+  background-color: #4074dc;
+
+  padding: 10px;
+}
+.trend-list {
+  height: 75%;
+  margin: 5px;
+
+  overflow-y: auto;
+
+  color: white;
+}
+.trend-list-li {
+  height: 10%;
+  padding: 5px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #072c72;
+  color: white;
+  padding-left: 10px;
+
+  transition: all 0.7s ease;
+}
+.trend-list-li > div > a {
+  color: white;
+}
+.trend-list-li:hover {
+  background-color: white;
+  color: black;
+}
+.trend-list-li:hover {
+  background-color: #5f92ef;
+  color: black;
+}
+.nooftweets {
+  color: #a9abaf;
+  font-size: 12px;
+}
+
+/* charts  */
+
+/* col2styling*/
+
+.user-name {
+  width: 95%;
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(to left, #20cbf4 0%, #3366ff 100%);
+  border-radius: 15px;
+  padding: 1rem;
+  color: white;
+  font-family: "Be Vietnam", sans-serif;
+}
+.user-name-content {
+  width: 60%;
+}
+.user-name-content > p {
+  font-size: 12px;
+}
+.user-content-button {
+  padding: 10px;
+  background-color: white;
+  font-weight: bolder;
+  border: 1px solid white;
+  font-family: "Be Vietnam", sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 0px 2px 0 rgb(235, 224, 223), 0 0px 5px 0 rgb(226, 218, 218);
+  margin-top: 5%;
+}
+
+.user-name-img {
+  width: 40%;
+}
+.user-name-img > img {
+  height: 200px;
+  width: 200px;
+  margin-left: 2rem;
+  margin-bottom: 30px;
+  margin-top: -30px;
+}
+.col2 {
+  width: 60%;
+  margin: 1%;
+}
+.chart-heading {
+  background-color: #4074dc;
+  color: white;
+  box-shadow: 0 10px 8px 0 rgb(240, 223, 223), 0 5px 5px 0 rgb(235, 220, 220);
+  padding: 10px;
+  width: 95%;
+}
+.chart {
+  width: 95%;
+  height: 30vh;
+  box-shadow: 0 10px 8px 0 rgb(235, 224, 223), 0 5px 5px 0 rgb(226, 218, 218);
+}
+.col2-p {
+  /* box-shadow: 0 1px 8px 0 #0e2468, 0 10px 10px 0 #182c52; */
+  padding: 10px 0px 10px 10px;
+  color: white;
+}
+/* boxes */
+.boxes {
+  height: 29vh;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+}
+.box1 {
+  width: 45%;
+  margin: 1%;
+  background-color: white;
+  box-shadow: 0 10px 8px 0 rgb(235, 224, 223), 0 5px 5px 0 rgb(226, 218, 218);
+}
+.box2 {
+  margin: 1%;
+  background-color: white;
+  width: 45%;
+  box-shadow: 0 10px 8px 0 rgb(235, 224, 223), 0 5px 5px 0 rgb(226, 218, 218);
+}
+/* for scrollbar */
+.scrollbar-colored::-webkit-scrollbar {
+  width: 18px; /* width of the entire scrollbar */
+}
+
+/* ::-webkit-scrollbar-track {
+  background: #072c72; /* color of the tracking area 
+} */
+.scrollbar-colored::-webkit-scrollbar-thumb {
+  background-color: rgb(93, 93, 232); /* color of the scroll thumb */
+  height: 60px;
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid rgb(34, 81, 118); /* creates padding around scroll thumb */
+}
