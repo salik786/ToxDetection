@@ -3,8 +3,9 @@ import { Link } from "react-router-dom"
 import axios from "axios";
 import GoogleButtonLogin from './googleLogin';
 
-
+// this component is hep to login user 
 import { useHistory } from "react-router-dom"
+
 const Login = () => {
     const history = useHistory();
     const [dataLogin, setDataLogin] = useState({
@@ -13,7 +14,7 @@ const Login = () => {
 
 
     })
-
+    // handling data from login form
     const handleInput = (event) => {
         const value = event.target.value;
         const name = event.target.name;
@@ -38,43 +39,45 @@ const Login = () => {
             })
     }
     return (
-        <>
-            <div className="social-login">
-                <p>Sign Up/Register From Social Accounts</p>
-                <div className="social-btns">
-                    <button className="soc-btn fb">Facebook</button>
-                    <button className="soc-btn goog" >Google</button>
-                    <button type="submit" className=""><Link to="/login" component={GoogleButtonLogin}>Login</Link></button>
-                    <button className="soc-btn twit">Twitter</button>
+        <div className="" style={{ backgroundColor: "#03173D", height: "100vh" }}>
+            <div className=" text-center text-white p-4 " style={{ backgroundColor: "#3e2cb7" }}>
+                <h3>Login Here</h3>
+
+            </div>
+            <div className="d-flex h-50 justify-content-center align-items-center shadow-lg p-3  rounded "  >
+
+                <div className="bg-light w-50   shadow-lg p-3 mt-5 rounded" style={{ padding: "20px" }} >
+                    <div className="social-login">
+
+                        <div className="social-btns ">
+
+                            <div className=" shadow-lg   rounded"><Link to="/login" component={GoogleButtonLogin}>Login</Link></div>
+                        </div>
+                    </div>
+                    <form className="login-form w-100" method="get" onSubmit={handleSubmit}>
+                        <label htmlFor="email">Username or Email</label>
+                        <input type="text "
+                            value={dataLogin.email}
+                            onChange={handleInput}
+                            name="email" id="email" />
+                        <label htmlFor="password">Password</label>
+                        <input type="password"
+                            value={dataLogin.password}
+                            onChange={handleInput}
+                            name="password" id="password" />
+                        <button type="submit " className="btn btn-primary p-2">Login</button>
+                        <div className="m-4">
+                            <Link to="/register" className="text-primary">Or register yourself here  </Link>
+                        </div>
+
+                    </form>
+
                 </div>
-            </div>
-            <div className="login-form-container">
-
-                <form className="login-form" method="get" onSubmit={handleSubmit}>
-                    <label htmlFor="email">Username or Email</label>
-                    <input type="text"
-                        value={dataLogin.email}
-                        onChange={handleInput}
-                        name="email" id="email" />
-                    <label htmlFor="password">Password</label>
-                    <input type="password"
-                        value={dataLogin.password}
-                        onChange={handleInput}
-                        name="password" id="password" />
-                    <button type="submit">Login</button>
-                    <button type="submit"><Link to="/register">Register</Link></button>
-                </form>
 
             </div>
-
-        </>
-
+        </div>
     )
 
 }
-// PropTypes is a library that helps in minimizing this problem in React by checking the types passed in the props object against a
-// specification we set beforehand and to raise a warning if the types passed don't match the types expected.
-// Login.propTypes = {
-//     setToken: PropTypes.func.isRequired
-// }
+
 export default Login;

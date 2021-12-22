@@ -1,17 +1,18 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+//this helps to identify the listed favoutie use in our app
 function ListUser() {
     const [local, setLocal] = useState([])
     const [dat, setdat] = useState("")
     const [count, setCount] = useState(0)
     useEffect(() => {
+        //getting data from localstorage forfavourite users.
         setdat(localStorage.getItem(`User${count}`))
 
         var newStatuses = [...local].concat(dat);
 
-        setLocal(newStatuses)
-        setCount(count + 1)
-        console.log(local)
+        setLocal(newStatuses);
+        setCount(count + 1);
         console.log(local)
 
     }, [dat])
@@ -21,19 +22,33 @@ function ListUser() {
     }
     return (
         <div style={{ color: "black" }} >
-            <h1 style={{ textAlign: "center", backgroundColor: "#2e53d7" }}>Your WatchList
-            </h1>
+            <div >
+                <h1 style={{ textAlign: "center", backgroundColor: "#2e53d7" }}>Your WatchList
+                </h1>
+            </div>
+            {
+                local.map((item, index) => {
+                    return (<>
 
-            <button style={{ width: "70vw", border: "2px solid #2c75f4", display: "flex", flexDirection: "row", padding: "10px" }} >
-                <h1 style={{ color: "black" }}>{local}</h1>
-                <button className="register-btn" style={{ backgroundColor: "#2e53d7", marginTop: "10px", marginLeft: "500px", padding: "10px", color: "white" }} onClick={clickHandler}>Remove</button>
-                <button className="register-btn" style={{ backgroundColor: "#2e53d7", marginTop: "10px", padding: "10px" }}>Edit</button>
+                        {item !== null && item != "" ?
 
-            </button>
+                            < button style={{ width: "80vw", border: "2px solid #2c75f4", display: "flex", flexDirection: "row", padding: "10px" }} >
+
+                                {console.log(item)}
+                                <h2 style={{ color: "black", width: "80%" }}>{item}</h2>
+                                <button className="" style={{ backgroundColor: "#2e53d7", marginTop: "10px", marginLeft: "500px", padding: "10px", color: "white" }} onClick={clickHandler}>Remove</button>
+                                <button className="" style={{ backgroundColor: "#2e53d7", marginTop: "10px", padding: "10px", color: "white" }}>Edit</button>
+                            </button> : <></>
+                        }
+
+                    </>)
+                })
+            }
 
 
 
-        </div>
+
+        </div >
     )
 }
 
