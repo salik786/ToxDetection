@@ -16,6 +16,7 @@ function ListUser() {
         console.log(local)
 
     }, [dat])
+    // removing logic appear here
     const clickHandler = (e) => {
 
         localStorage.removeItem("User")
